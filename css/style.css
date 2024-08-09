@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --colorPrimario: #F8E8E8;
+    --colorSecundario: #A67C52;
+    --colorTerciario: #9f4292;
+    --colorCuaternario: #D45D79;
+    --colorTexto: #555;
+    --colorSubtitulos: #333;
+    --colorSombras: #888888;
+
+    --fuenteMonserrat: 'Montserrat',
+        sans-serif;
+    --fuenteKrona: 'Krona One',
+        sans-serif;
+    --fontSize24: 1.5rem;
+    --fontSize18: 1.125rem;
+    --fontSize36: 2rem;
+}
+
+body {
+    background-color: var(--colorPrimario);
+    font-family: var(--fuenteMonserrat);
+    color: var(--colorSecundario);
+}
+
+span {
+    color: var(--colorSecundario);
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+}
+
+.headerMenuLink {
+    font-family: var(--fuenteMonserrat);
+    font-size: var(--fontSize18);
+        color: var(--colorSubtitulos);
+        text-decoration: none;
+        font-weight: 600;
+}
+
+.headerMenuLink:hover {
+    color: var(--colorTerciario);
+    text-shadow: 0.125rem 0.125rem 0.25rem var(--colorSombras);
+}
+
+.headerMenu {
+    display: flex;
+    gap: 5rem;
+}
+
+.presentacion {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+}
+
+#titleFullStack {
+    font-family: var(--fuenteKrona);
+    font-size: var(--fontSize36);
+    color: var(--colorCuaternario);
+}
+
+#titleFullStack span {
+    color: #9f4292;
+}
+
+.text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.text p {
+    font-family: var(--fuenteMonserrat);
+    font-size: var(--fontSize24);
+    color: var(--colorTexto);
+    margin: 0 0 1.25rem;
+}
+
+.buttons {
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+}
+
+.buttonsLinks a {
+    margin: 5%;
+} 
+
+.buttonsLinks a:hover .linkedinIcon  {
+content: url('/images/icons8-linkedin-32.png');
+}
+
+.buttonsLinks a:hover .githubIcon {
+    content: url('/images/icons8-github-32.png');
+}
+
+.buttonsLinks a:hover .instagramIcon {
+    content: url('/images/icons8-instagram-32.png');
+}
+
+.buttonsLinks a {
+    display: flex;
+        justify-content: center;
+        gap: 16px;
+        border: 0.1875rem solid var(--colorCuaternario);
+        text-align: center;
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 1.3rem 3rem;
+        text-decoration: none;
+        color: var(--colorTexto);
+        font-family: var(--fuente-montserrat);
+    transition: box-shadow 0.5s ease;
+}
+
+.buttonsLinks a:hover {
+    color: var(--colorPrimario);
+    background-color: rgba(159, 66, 147, 0.721);
+    border: 0.1875rem solid var(--colorTerciario);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle-buttons {
+    font-family: var(--fuenteKrona);
+        font-size: var(--fontSize24);
+        font-weight: 400;
+        color: var(--colorCuaternario);
+}
+
+.imgVerseContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+    margin: 5%;
+}
+
+.imgVerseContainer p {
+    font-size: var(--fontSize18);
+    font-weight: 700;
+    font-style: italic;
+}
+
+.imgVerseContainer p span {
+    color: #9f4292;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.footer {
+    background-color: var(--colorSecundario);
+    color: var(--colorPrimario);
+    padding: 24px;
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--fuenteKrona);
+    size: var(--fontSize24);
+}
+
+
+
+@media (max-width: 1200px) {
+    .presentacion {
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+    }
+
+    #titleFullStack {
+        margin-top: 10%;
+    }
+
+    .text {
+        width: auto;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .header h1 {
+        font-size: 1em;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+
+    .buttons a {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+
+
